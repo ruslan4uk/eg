@@ -1,10 +1,34 @@
 ---
-title: Index page
+title: Главная страница - EG
+navigation: false
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 	
-	
+	<section class="main">
+		<div class="container">
+			{% include "partials/_navigation.html" %}
+			<div class="main__content">
+				<svg class="main__icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
+				<div class="main__title">Все совершенно просто!</div>
+				<div class="main__subtitle">Выберите страну и начните путешествие прямо сейчас</div>
+				<!-- search -->
+				<div class="search">
+					<form action="" class="search__form">
+						<div class="search__group">
+							<input type="text" class="search__input" placeholder="Рим (Италия)">
+							<input type="submit" class="search__button" value="От винта!">
+							<div class="search__country">
+								<img src="img/main/flag.png" alt="">
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{% include "partials/_subnavigation.html" %}
 
 {% endblock %}

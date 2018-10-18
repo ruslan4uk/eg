@@ -1,5 +1,85 @@
-body
-	background: #FFF
-	+css-lock(16, 50, 600, 1000)
-	line-height: 1.4
+// Breakpoints
+$xs: 576
+$sm: 768
+$md: 992
+$lg: 1200
 
+// colors
+$blue: #405089
+$orange: #ff7555
+
+html
+    font-size: 16px
+body 
+	font-family: 'GothamPro'
+	font-weight: 300
+	font-size: 1rem
+	line-height: 1.4
+    background: #ccc
+
+.container
+    width: 100%
+    max-width: 540px
+    margin: 0 auto
+    padding: 0 20px
+    +rmin($sm)
+        max-width: 720px
+    +rmin($md)
+        max-width: 960px
+    +rmin($lg)
+        max-width: 1170px
+
+// General
+img 
+	max-width: 100%
+	font-size: 0
+	line-height: 0
+	display: block
+
+a 
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
+p 
+	margin-bottom: 1rem
+
+h1 
+	font-weight: 400
+
+
+// other style
+.logo
+	padding: 1rem 0.625rem
+	background: $orange
+	color: #ffffff
+	font-weight: 700
+	display: inline-block
+	border-radius: 10px
+	font-size: 1.25rem
+
+
+
+// button's
+.btn
+	min-width: 9rem
+	display: inline-block
+	padding: 0.625rem
+	border: 1px solid
+	border-radius: 25px
+	text-align: center
+	font-weight: 400
+	line-height: 1.2rem
+	+tr(all ease 0.2s)
+	&--blue 
+		background: $blue
+		color: #ffffff
+		border-color: #ffffff
+	&--white
+		background: #ffffff
+		color: $blue
+		border-color: #ffffff
+	&:hover
+		opacity: 0.75
+	&--ml
+		margin-left: 1rem
