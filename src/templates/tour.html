@@ -1,0 +1,19 @@
+---
+title: Главная страница - EG
+navigation: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<section class="top">
+        <div class="container">
+            {% include "partials/_navigation.html" %}
+        </div>
+    </section>
+
+	
+
+	{% include "partials/_footer.html" %}
+
+{% endblock %}
