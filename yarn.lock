@@ -4013,7 +4013,7 @@ jest-validate@^23.5.0:
     leven "^2.1.0"
     pretty-format "^23.6.0"
 
-jquery@^3.1.1:
+jquery@>2.1.4, jquery@^3.1.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
@@ -5860,6 +5860,12 @@ readdirp@^2.0.0:
     graceful-fs "^4.1.11"
     micromatch "^3.1.10"
     readable-stream "^2.0.2"
+
+readmore-js@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/readmore-js/-/readmore-js-2.2.1.tgz#ab75036c8a47b6ffa2d3d14cd527c7f479edc117"
+  dependencies:
+    jquery ">2.1.4"
 
 rechoir@^0.6.2:
   version "0.6.2"

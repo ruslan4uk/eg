@@ -1,0 +1,93 @@
+---
+title: Страницы экскурсии - EG
+navigation: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<section class="top">
+        <div class="container">
+            {% include "partials/_navigation.html" %}
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about__wrap about__wrap--mb">
+                <div class="about__content">
+                    <div class="about__title about__title--big">
+                        Исследуйте!<br>
+                        Мечтайте!<br>
+                        Открывайте!
+                    </div>
+                </div>
+                <div class="about__image">
+                    <img src="img/about/pic1.png" alt="">
+                </div>
+            </div>
+
+            <div class="about__wrap about__wrap--mb about__wrap--revers">
+                <div class="about__content">
+                    <div class="about__title">Почему мы?</div>
+                    <div class="about__text">
+                        <p>Это очень простой вопрос! Мы знакомим вас не с гидами, передающими 
+                        сухую информацию, а энтузиастами в мире туризма, великолепными 
+                        рассказчиками и потрясающими путеводителями, которые откроют вам 
+                        удивительный мир, наполненный приключениями.</p>
+
+                        <p>Забудьте о жесткой привязанности к графику экскурсии, корректируйте 
+                        свой маршрут и находите новых друзей в лице ваших гидов.</p>
+
+                        <p>И еще несколько наших особенностей за которые нас выбирают:</p>
+
+                        <p>1. Чаще всего экскурсии проводят гиды из России, что позволяет стереть 
+                        языковой барьер и почувствовать себя своим даже в чужой стране<br>
+                        2. У большинства наших гидов малогабаритный транспорт (микроавтобусы, 
+                        легковые автомобили), что позволяет путешествовать небольшой 
+                        группой, и дает вам больше возможностей для личного общения с гидом<br>
+                        3. Ну и на десерт самое приятное — цены без накрученных процентов, 
+                            что делает их значительно ниже</p>
+                    </div>
+                </div>
+                <div class="about__image">
+                    <img src="img/about/pic2.png" alt="">
+                </div>
+            </div>
+
+            <div class="about__wrap about__wrap--mb">
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>Вы путешественник? Первооткрыватель? Или просто любитель съездить 
+                        — отдохнуть? Мы разделяем с вами интересы, потому что нет ничего 
+                        прекраснее, чем открывать перед собой неизведанные уголки нашей 
+                        планеты. Поэтому мы создали ресурс, который объединяет всех, кому 
+                        не чужды постоянные поиски новых мест. Мы всегда рады туристам 
+                        и гидам, ведь нас всех объединяет невероятная страсть к путешествиям. </p>
+
+                        <p>Сделайте парочку кликов и окажитесь в пучине настоящих приключений! 
+                        Дерзайте и поймайте ветер в свои паруса прямо сейчас!</p>
+                    </div>
+                </div>
+                <div class="about__image">
+                    <img src="img/about/pic3.png" alt="">
+                </div>
+            </div>
+
+            {# about-bottom #}
+            <div class="about__bottom">
+                <div class="about__bottom-wrap">
+                    <svg class="about__bottom-icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
+                    <div class="about__bottom-text">
+                        «Путешествие за тысячу миль 
+                        начинается с одного шага»
+                        <div class="about__bottom-author">Лао-Цзы</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

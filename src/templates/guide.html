@@ -1,0 +1,97 @@
+---
+title: Страницы гида - EG
+navigation: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<section class="top top--blue">
+        <div class="container">
+            {% include "partials/_navigation.html" %}
+        </div>
+    </section>
+
+	<div class="cguide">
+        <div class="container">
+            <div class="cguide__wrap">
+                <div class="cguide__left">
+                    <div class="cguide__userpic">
+                        <img src="img/cguide/userpic.jpg" alt="" />
+                    </div>
+                    <div class="cguide__fio">Евгения Кулишенко</div>
+                    <div class="cguide__cl">
+                        <div class="cguide__cl-block">
+                            <svg class="cguide__cl-icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
+                            <span class="cguide__cl-count">285</span>
+                        </div>
+                        <div class="cguide__cl-block">
+                            <svg class="cguide__cl-icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
+                            <span class="cguide__cl-count">15</span>
+                        </div>
+                    </div>
+                    <div class="cguide__lang">
+                        <div class="cguide__lang-title">Владение языками</div>
+                        <div class="cguide__lang-list">
+                            <a href="" class="cguide__lang-item">
+                                <img src="img/main/flag.png" alt="" />
+                            </a>
+                            <a href="" class="cguide__lang-item">
+                                <img src="img/main/flag.png" alt="" />
+                            </a>
+                            <a href="" class="cguide__lang-item">
+                                <img src="img/main/flag.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cguide__services">
+                        <div class="cguide__subtitle">Услуги</div>
+                        <p>-Индивидуальные экскурсии </p>
+                        <p>-Сопровождение на деловых 
+                        встречах, организация 
+                        конференций, устный перевод</p>
+                        <p>-Трансфер</p>
+                        <p>-Услуги перевода</p>
+                    </div>
+                </div>
+                <div class="cguide__right">
+                    <div class="cguide__content">
+                        <div class="cguide__title">Обо мне</div>
+                        <p>Benvenuti in Italia! Наша команда гидов создает авторские экскурсии специально для тех, 
+                        кто хочет увидеть Рим и Италию глазами местных жителей. Мы с радостью представляем 
+                        гастрономические экскурсии в Риме и Тоскане, которые объединяют в себе историю 
+                        и гастрономию Италии, а также экскурсии в музеи Ватикана и собор Св.Петра. Мы проводим 
+                        групповые экскурсии в Риме (до 10 участников) и индивидуальные в Тоскане. 
+                        Присоединяйтесь к нам — будет интересно, познавательно и очень вкусно! </p>
+                        
+                        <div class="cguide__contact">
+                            <div class="cguide__title">Основные контакты</div>
+                            <div class="cguide__contact-list">
+                                {% for i in [1,2,3,4,5,6] %}
+                                <div class="cguide__contact-item">
+                                    <svg class="cguide__contact-icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
+                                    <div class="cguide__contact-text">kulishenko@libero.it</div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="cguide__action">
+                            <div class="cguide__title">Акции</div>
+                        </div>
+                    </div>
+
+                    <div class="cguide__comments">
+                        <div class="cguide__title">Комментарии</div>
+                        {% for i in [1,2,3,4,5] %}
+                            {% include "partials/blocks/_comment.html" %}
+                        {% endfor %}
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

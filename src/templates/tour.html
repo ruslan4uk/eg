@@ -1,5 +1,5 @@
 ---
-title: Главная страница - EG
+title: Страницы экскурсии - EG
 navigation: true
 ---
 {% extends "layouts/_layout.html" %}
@@ -12,7 +12,99 @@ navigation: true
         </div>
     </section>
 
-	
+	<section class="ctour">
+        <div class="container">
+            <div class="ctour__wrap">
+                <div class="ctour__left">
+                    <div class="ctour__ltitle">Гиды</div>
+                    {# Карточка гида слева #}
+                    {% for i in [1,2] %}
+                        {% include "partials/blocks/_guide-card.html" %}
+                    {% endfor %}
+                </div>
+                <div class="ctour__right">
+                    <div class="ctour__title">Грехом обретенное бессмертие. <br>Великие династии Ватикана</div>
+                    <div class="ctour__image">
+                        <img src="img/ctour/topbg.jpg" alt="">
+                    </div>
+                    <div class="ctour__content">
+                        {# info #}
+                        <div class="ctour__info">
+                            <div class="ctour__info-left">
+                                <div class="ctour__info-wrap">
+                                    <div class="ctour__info-item">
+                                        <svg class="ctour__info-icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
+                                        <div class="ctour__info-t">4-5 часов</div>
+                                    </div>
+                                    <div class="ctour__info-item">
+                                        <svg class="ctour__info-icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
+                                        <div class="ctour__info-t">1-8 человек</div>
+                                    </div>
+                                    <div class="ctour__info-item">
+                                        <svg class="ctour__info-icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
+                                        <div class="ctour__info-t">250 руб.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ctour__info-right">
+                                <div class="ctour__timeline timeline">
+                                    <div class="timeline__wrap">
+                                        <div class="timeline__line"></div>
+                                        <div class="timeline__list hscroll">
+                                            <div class="timeline__item">Рим
+                                                <div class="timeline__dot"></div>
+                                            </div>
+                                            <div class="timeline__item">Castel Gandolfo
+                                                <div class="timeline__dot"></div>
+                                            </div>
+                                            <div class="timeline__item">Рим
+                                                <div class="timeline__dot"></div>
+                                            </div>
+                                            <div class="timeline__item">Castel Gandolfo
+                                                <div class="timeline__dot"></div>
+                                            </div>
+                                            <div class="timeline__item">Castel Gandolfo
+                                                <div class="timeline__dot"></div>
+                                            </div>
+                                        </div>
+                                    </div>					
+                                </div>
+                            </div>
+                        </div>
+                        {# end info #}
+
+                        {# content #}
+                        <div class="ctour__text">
+                            <p>Папы Римские эпохи Ренессанса: они несли смерть и разрушения, их армии 
+                                сметали с лица земли армии своих противников, их казна ломилась от золота, 
+                                их любили прекраснейшие женщины мира, для них трудились величайшие гении 
+                                искусства и науки. Их жизнь по роскоши и силе власти превосходила королевскую, 
+                                вот только их престол, теперь украшенный драгоценными каменьями, изначально 
+                                был простой деревянной кафедрой рыбака Петра, смиреннейшего из апостолов.</p>
+
+                            <p>Спустя века мы продолжаем завороженно произносить имена: Борджиа, Медичи, 
+                                Делла Ровере, Киджи. Кем же они были? Так ли уж сильно грешили или может 
+                                быть это очередной фарс историков, желающих опорочить великих Пап? Где найти 
+                                правду?</p>
+
+                            <p>По опыту мы знаем, что достаточно заглянуть в дом, чтобы узнать невероятно много 
+                                о привычках, образе жизни, чаяниях и увлечениях его обитателей. Поэтому, на этой 
+                                экскурсии мы с вами отправимся в покои, где жили Папы из знаменитых династий 
+                                и попробуем, шагнув чуть дальше обычного описания роскошных фресок, 
+                                украшающих их стены, понять, кем же они были, эти Короли Ренессанса 
+                                и в то же время скромные наследники апостола Петра.</p>
+                        </div>
+                        {# end content #}
+                    </div>
+                    {# btn background #}
+                    <div class="ctour__btn">
+                        <a href="" class="btn btn--ctour">Заказать экскурсию</a>
+                    </div>
+                    {# end btn background #}
+                </div>
+            </div>
+        </div>
+    </section>
 
 	{% include "partials/_footer.html" %}
 
