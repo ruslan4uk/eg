@@ -1,0 +1,50 @@
+---
+title: Регистрация - EG
+navigation: true
+nav: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<section class="top">
+        <div class="container">
+            {% include "partials/_navigation.html" %}
+        </div>
+    </section>
+
+    <section class="op">
+        <div class="container">
+            <div class="op__wrap">
+                <div class="op__left op__left--register">
+                    <img src="img/op/callback.png" alt="" class="op__poster" width="90%" />
+                </div>
+                <div class="op__right">
+                    <div class="op__title">Здравствуйте!</div>
+                    <div class="op__subtitle">Задайте интересующий Вас вопрос</div>
+                    <form action="" class="op__form form">
+                        <div class="form__group">
+                            <input type="text" name="" id="" placeholder="Ваше сообщение" />
+                        </div>
+                        <div class="form__group">
+                            <input type="text" name="" id="" placeholder="Ваше имя" />
+                        </div>
+                        <div class="form__group">
+                            <input type="text" name="" id="" placeholder="Эл.почта для ответа" />
+                        </div>
+                        <div class="form__group">
+                            <label for="register__tourist" class="form__label">
+                                <input type="checkbox" name="" id="register__tourist" />
+                                Согласие на обработку персональных данных
+                            </label>
+                        </div>
+                        <div class="form__group">
+                            <input type="submit" value="ОТПРАВИТЬ" class="btn btn--gh op__btn" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

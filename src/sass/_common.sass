@@ -8,6 +8,9 @@ $lg: 1200
 $blue: #405089
 $orange: #ff7555
 
+*
+	box-sizing: border-box
+
 html
     font-size: 16px
 body 
@@ -152,6 +155,124 @@ h1
 
 
 
+
+// owl carousel
+.owl-carousel
+	& .owl-dots
+		display: flex
+		justify-content: center
+		justify-items: center
+		margin-top: 1.75rem
+	& .owl-dot 
+			width: 0.625rem
+			height: 0.625rem
+			background: #585f76 !important
+			border-radius: 50%
+			margin: 0 0.25rem
+			opacity: 0.25
+			+tr(all ease 0.3s)
+			&:hover
+				opacity: 1
+			&.active
+				opacity: 1
+
+
+// form
+.form
+	&__group
+		margin-bottom: 1.5rem
+	& input[type=text], input[type=password]
+		background: transparent 
+		font-size: 0.750rem
+		color: #405089
+		border-bottom: 1px solid #e7e7e8
+		width: 100%
+		padding: 0.5rem 0
+		font-weight: 500
+		&::placeholder
+			color: #405089
+			font-weight: 500
+	&__forgot-password
+		color: #bababa
+		font-size: 0.75rem
+		display: flex
+		justify-content: flex-end
+		margin-top: -1.25rem
+		margin-bottom: 1.5rem
+		text-decoration: dashed
+		
+	&__label
+		color: #bababa
+		font-size: 0.75rem
+		font-weight: 500
+		&--blue 
+			color: $blue
+	&__select
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		border-radius: 0
+		background: transparent 
+		font-size: 0.825rem
+		color: #405089
+		border: 0
+		border-bottom: 1px solid #e7e7e8
+		width: 100%
+		padding: 0.5rem 0
+		font-weight: 500
+
+
+	// custom-checkbox
+	&__custom-checkbox
+		& label
+			padding-left: 1.125rem
+			overflow: hidden
+			position: relative
+			&:after
+				content: ' '
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 0.5rem
+				height: 0.5rem
+				padding: 0.063rem
+				border-radius: 3px
+				background: transparent 
+				border: 1px solid #cccccc
+				box-sizing: content-box
+		& input[type="checkbox"]
+			position: absolute
+			left: -99999rem
+		& input[type="checkbox"]:checked + label:after
+			background-image: url(../img/op/checkbox.svg)
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: 85% 85%
+			border: 1px solid $blue
+
+	// radio
+	&__radio-group
+		display: flex
+	&__radio
+		margin-right: 1rem
+		& input[type="radio"]
+			position: absolute
+			left: -9999999px
+		& label 
+			padding-left: 1.125rem
+			position: relative
+			&:after
+				content: ' '
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 0.75rem
+				height: 0.75rem
+				border: 4px solid $blue
+				background: $blue 
+				border-radius: 50px
+		& input[type="radio"]:checked + label:after
+			background: #5fbafe 
 
 
 

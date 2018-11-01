@@ -16,20 +16,20 @@
         <div class="container">
           <div class="navigation ">
             <div class="navigation__wrap">
-              <a href="" class="navigation__logo">
+              <a href="page.html" class="navigation__logo">
                 <div class="logo">EG</div>
               </a>
               <ul class="navigation__list">
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link">О нас</a>
+                  <a href="about.html" class="navigation__link">О нас</a>
                 </li>
                 <li class="navigation__item">
-                  <a href="#" class="navigation__link">Обратная связь</a>
+                  <a href="callback.html" class="navigation__link">Обратная связь</a>
                 </li>
               </ul>
               <div class="navigation__right">
-                <a href="" class="btn btn--white">Вход</a>
-                <a href="" class="btn btn--blue btn--ml">Регистрация</a>
+                <a href="login.html" class="btn btn--white">Вход</a>
+                <a href="register.html" class="btn btn--blue btn--ml">Регистрация</a>
               </div>
             </div>
           </div>
@@ -60,25 +60,25 @@
           <div class="subnavigation__wrap">
             <ul class="subnavigation__list subnavigation__list--shadow subnavigation__list--of">
               <li class="subnavigation__item active">
-                <a href="" class="subnavigation__link">
+                <a href="" class="subnavigation__link" data-main-tab-nav="1">
                   <svg class="subnavigation__icon">
                     <use xlink:href="img/sprite.svg#icon-tours"></use>
                   </svg> Экскурсии </a>
               </li>
               <li class="subnavigation__item">
-                <a href="" class="subnavigation__link">
+                <a href="" class="subnavigation__link" data-main-tab-nav="2">
                   <svg class="subnavigation__icon">
                     <use xlink:href="img/sprite.svg#icon-tours"></use>
                   </svg> Гиды </a>
               </li>
               <li class="subnavigation__item">
-                <a href="" class="subnavigation__link">
+                <a href="" class="subnavigation__link" data-main-tab-nav="3">
                   <svg class="subnavigation__icon">
                     <use xlink:href="img/sprite.svg#icon-sights"></use>
                   </svg> Достопримечательности </a>
               </li>
               <li class="subnavigation__item">
-                <a href="" class="subnavigation__link">
+                <a href="" class="subnavigation__link" data-main-tab-nav="4">
                   <svg class="subnavigation__icon">
                     <use xlink:href="img/sprite.svg#icon-weather"></use>
                   </svg> Погода </a>
@@ -120,7 +120,7 @@
       <section class="mcontent">
         <div class="container">
           <div class="mcontent__title">Нашлось 800 достопримечательностей в Риме</div>
-          <div class="mcontent__wrap">
+          <div class="mcontent__wrap active" data-main-tab="1">
             <div class="mcontent__tour tour">
               <div class="tour__image">
                 <img src="img/main/tours.png" alt="" />
@@ -307,7 +307,7 @@
               </div>
             </div>
           </div>
-          <div class="mcontent__wrap">
+          <div class="mcontent__wrap" data-main-tab="2">
             <div class="mcontent__guide guide">
               <div class="guide__wrap">
                 <div class="guide__photo">
@@ -379,7 +379,7 @@
               </div>
             </div>
           </div>
-          <div class="mcontent__wrap">
+          <div class="mcontent__wrap" data-main-tab="3">
             <div class="mcontent__tour tour">
               <div class="tour__image">
                 <img src="img/main/tours.png" alt="" />
@@ -457,7 +457,7 @@
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/app.js?ver=1"></script>
     <!-- END scripts -->
   </body>
 </html>

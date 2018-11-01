@@ -1,6 +1,7 @@
 ---
 title: Страницы гида - EG
 navigation: false
+nav: true
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -74,9 +75,19 @@ navigation: false
                                 </div>
                                 {% endfor %}
                             </div>
+                            <a href="#" class="cguide__contact-more">Подробнее</a>
                         </div>
-                        <div class="cguide__action">
-                            <div class="cguide__title">Акции</div>
+                        <div class="cguide__action action">
+                            <div class="cguide__title action__title">Акции</div>
+                            <div class="action__wrap owl-carousel js--action-slider">
+                                {% for i in [1,2,3,4,5,6,7,8,9,10] %}
+                                <div class="action__item">
+                                    <a href="#" class="action__link">
+                                        <img src="img/action/action.jpg" alt="">
+                                    </a>
+                                </div>
+                                {% endfor %}
+                            </div>
                         </div>
                     </div>
 

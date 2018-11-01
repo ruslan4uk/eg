@@ -246,7 +246,7 @@
 		font-size: 1.125rem
 		margin-bottom: 1.5rem
 	&__wrap
-		display: flex
+		display: none
 		flex-wrap: wrap
 		flex-flow: row wrap
 		justify-content: space-between
@@ -258,6 +258,8 @@
 				width: calc(50% - 0.5rem)
 			+rmin($md)
 				width: calc(33% - 0.5rem)
+		&.active
+			display: flex
 	&__tour
 		width: 100%
 		+rmin($xs)
@@ -656,6 +658,17 @@
 			margin-bottom: 0.125rem
 		&-text 
 			color: #75797e
+		&-more 
+			font-size: .75rem
+			font-weight: 700
+			text-transform: uppercase
+			position: relative
+			color: #000
+			-webkit-box-pack: end
+			-ms-flex-pack: end
+			justify-content: flex-end
+			margin-top: 1rem
+			display: flex
 
 	// action
 	&__action
@@ -668,11 +681,31 @@
 			box-shadow: 0 0 10px 3px rgba(0,0,0,.04)
 			padding: 1.5rem
 
+// action
+.action
+	&__wrap
+		display: flex
+		width: 100%
+		& .owl-stage-outer
+			margin-left: -20px
+			margin-right: -20px
+			+rmin(420)
+				margin-left: 0
+				margin-right: 0
+	&__link
+		display: block
+
 
 
 // comment
 .comment
-	margin: 1rem 0
+	margin: 1rem 0 2rem
+	padding-bottom: 1.5rem
+	border-bottom: 1px solid #eee
+	&:last-child
+		padding-bottom: 0
+		margin-bottom: 1rem
+		border-bottom: 0
 	&__wrap
 		display: flex
 		flex-wrap: wrap
@@ -782,3 +815,88 @@
 			color: #585f76
 			margin-top: 1rem
 			text-align: right
+
+
+
+// op
+.op
+	margin-top: 1rem
+	+rmin($md)
+		display: flex
+		height: calc(100vh - 8rem)
+		align-items: center
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		align-content: center
+		align-items: center
+		justify-content: center
+		+rmin($md)
+			justify-content: space-between
+			flex-wrap: nowrap
+	&__left
+		width: 100%
+		padding-right: 5%
+		max-width: 505px
+		display: none
+		+rmin($md)
+			display: block
+		&--register
+			max-width: 55%
+		&--success
+			display: block
+			padding-left: 2rem
+			padding-right: 2rem
+			margin-bottom: 2rem
+	&__right
+		width: 100%
+		max-width: 490px
+		margin-bottom: 2rem
+		+rmin($md)
+			padding-left: 5%
+			width: 50%
+	&__btn 
+		font-size: 1rem
+		padding: 0.875rem
+		width: 100%	
+		text-transform: uppercase
+		font-weight: 500
+		&--mt 
+			margin-top: 1.5rem
+	&__title
+		font-size: 2rem
+		color: #585f76
+		font-weight: 400
+		+rmin($xs)
+			font-size: 2rem
+	&__subtitle
+		font-size: 1rem
+		font-weight: 300
+		color: #585f76
+	&__form
+		margin-top: 1rem
+
+	&__social
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		justify-content: center
+		+rmin($md)
+			justify-content: flex-start
+		&-text 
+			font-size: 0.750rem
+			margin-right: 1rem
+			color: #405089
+			font-weight: 500
+			width: 100%
+			text-align: center
+			+rmin($md)	
+				text-align: left
+				width: auto
+		&-item 
+			max-width: 2rem
+			margin-left: 0.5rem
+			margin-top: 1rem
+			+rmin($md)
+				margin-top: 0

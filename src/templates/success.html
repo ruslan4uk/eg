@@ -1,0 +1,31 @@
+---
+title: Регистрация - EG
+navigation: true
+nav: false
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<section class="top">
+        <div class="container">
+            {% include "partials/_navigation.html" %}
+        </div>
+    </section>
+
+    <section class="op">
+        <div class="container">
+            <div class="op__wrap">
+                <div class="op__left op__left--success">
+                    <img src="img/op/success.png" alt="" class="op__poster" />
+                </div>
+                <div class="op__right">
+                    <div class="op__title">Ваше сообщение успешно отправлено!</div>
+                    <div class="op__subtitle">Мы ответим Вам в ближайшее время</div>
+                    <a href="" class="btn btn--gh op__btn op__btn--mt">на главную</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
