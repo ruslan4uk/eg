@@ -24,14 +24,13 @@ $(document).on("click", "a[data-main-tab-nav]", function(e) {
 
 // owl carousel
 $(".js--action-slider").owlCarousel({
-  loop: false,
-  margin: 10,
+  loop: true,
   margin: 20,
   dots: false,
   responsive: {
     0: {
       items: 1,
-      stagePadding: 50
+      stagePadding: 20
     },
     420: {
       items: 2,
