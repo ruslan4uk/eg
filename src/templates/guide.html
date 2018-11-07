@@ -68,22 +68,43 @@ nav: true
                         <div class="cguide__contact">
                             <div class="cguide__title">Основные контакты</div>
                             <div class="cguide__contact-list">
-                                {% for i in [1,2,3,4,5,6] %}
+                                {% for i in [1,2,3,4] %}
                                 <div class="cguide__contact-item">
                                     <svg class="cguide__contact-icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
                                     <div class="cguide__contact-text">kulishenko@libero.it</div>
                                 </div>
                                 {% endfor %}
                             </div>
-                            <a href="#" class="cguide__contact-more">Подробнее</a>
+                            <div class="cguide__contact-hide">
+                                <div class="cguide__title cguide__title--small">Дополнительные</div>
+                                <div class="cguide__contact-list">
+                                    {% for i in [1,2,3,4,5,6] %}
+                                    <div class="cguide__contact-item">
+                                        <svg class="cguide__contact-icon"><use xlink:href="img/sprite.svg#icon-main"></use></svg>
+                                        <div class="cguide__contact-text">kulishenko@libero.it</div>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <a href="" class="cguide__contact-more js--cguide-open">Подробнее</a>
                         </div>
                         <div class="cguide__action action">
                             <div class="cguide__title action__title">Акции</div>
                             <div class="action__wrap owl-carousel js--action-slider">
-                                {% for i in [1,2,3,4,5,6,7,8,9,10] %}
+                                {% for i in [1,2,3] %}
                                 <div class="action__item">
                                     <a href="#" class="action__link">
-                                        <img src="img/action/action.jpg" alt="" />
+                                        <img src="img/action/action2.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="action__item">
+                                    <a href="#" class="action__link">
+                                        <img src="img/action/action3.jpg" alt="" />
+                                    </a>
+                                </div>
+                                <div class="action__item">
+                                    <a href="#" class="action__link">
+                                        <img src="img/action/action4.jpg" alt="" />
                                     </a>
                                 </div>
                                 {% endfor %}

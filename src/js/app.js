@@ -4,6 +4,35 @@ import "owl.carousel";
 
 sayHello();
 
+// main search
+$(document).on("focus", ".search__input", function() {
+  $(".search").addClass("search--focus");
+  setTimeout(() => {
+    $(".search__ac").slideDown(300);
+  }, 100);
+});
+
+$(document).on("focusout", ".search__input", function() {
+  setTimeout(() => {
+    $(".search__ac").slideUp(300);
+  }, 100);
+  setTimeout(() => {
+    $(".search").removeClass("search--focus");
+  }, 350);
+});
+
+// cguide open
+$(document).on("click", ".js--cguide-open", function(e) {
+  e.preventDefault();
+  if ($(this).hasClass("active")) {
+    $(this).removeClass("active");
+    $(".cguide__contact-hide").slideUp(150);
+  } else {
+    $(this).addClass("active");
+    $(".cguide__contact-hide").slideDown(150);
+  }
+});
+
 // main tabs
 $(document).on("click", "a[data-main-tab-nav]", function(e) {
   e.preventDefault();

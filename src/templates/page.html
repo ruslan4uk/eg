@@ -18,10 +18,24 @@ nav: true
 				<div class="search">
 					<form action="" class="search__form">
 						<div class="search__group">
-							<input type="text" class="search__input" placeholder="Рим (Италия)" />
+							<input type="text" class="search__input" placeholder="Ба" />
 							<input type="submit" class="search__button" value="От винта!" />
-							<div class="search__country">
+							{# <div class="search__country">
 								<img src="img/main/flag.png" alt="" />
+							</div> #}
+
+							{# auto complite #}
+							<div class="search__ac ac">
+								<div class="ac__list">
+									{% for i in [1,2,3,4] %}
+									<a href="" class="ac__item">
+										<div class="ac__flag">
+											<img src="img/main/flag.png" alt="">
+										</div>
+										<div class="ac__country">Барселона, Испания</div>
+									</a>
+									{% endfor %}
+								</div>
 							</div>
 						</div>
 					</form>
