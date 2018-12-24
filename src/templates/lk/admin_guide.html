@@ -1,0 +1,73 @@
+---
+title: Профиль / Личный кабинет - EG
+navigation: true
+nav: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<section class="top">
+        <div class="container">
+            {% include "partials/_navigation.html" %}
+        </div>
+    </section>
+
+	<section class="lk">
+        <div class="container">
+            <div class="lk__wrap">
+                <div class="lk__left mb-2">
+                    <div class="lk__left-nav">
+                        <ul>
+                            <li class="active"><a href="#">Гиды</a></li>
+                            <li><a href="#">Комментарии</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lk__right">
+
+                    {# First card #}
+                    <div class="lk__card mb-3">
+                        <div class="lk__title">Управление гидами</div>
+                        <div class="table-flex-guide">
+                            <div class="table-flex-guide__header">
+                                <div class="table-flex-guide__row">
+                                    <div class="table-flex-guide__col table-flex-guide__col--name">Имя</div>
+                                    <div class="table-flex-guide__col table-flex-guide__col--createdon">Дата регистрации</div>
+                                    <div class="table-flex-guide__col table-flex-guide__col--btns"></div>
+                                </div>
+                            </div>
+                            <div class="table-flex-guide__body">
+                                {% for i in [1,2,3,4,5] %}
+                                <div class="table-flex-guide__row">
+                                    <div class="table-flex-guide__col table-flex-guide__col--name">
+                                        <div class="user-pic lk__userpic">
+                                            <div class="user-pic__photo">
+                                                <img src="img/lk/userpic.png" alt="">
+                                            </div>
+                                            <div class="user-pic__name">
+                                                Евгения Кулишенко
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="table-flex-guide__col table-flex-guide__col--createdon">01.01.2018</div>
+                                    <div class="table-flex-guide__col table-flex-guide__col--btns admin__btns">
+                                        <a href="" class="admin__btn admin__btn--public">Опубликовать</a>
+                                        <a href="" class="admin__btn admin__btn--edit">Редактировать</a>
+                                        <a href="" class="admin__btn admin__btn--delete">Удалить</a>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                    {# End first card #}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

@@ -4,15 +4,19 @@ import "owl.carousel";
 
 sayHello();
 
+// $(document).on('change', 'input[type=text]', function (e) {
+//   $(this).attr('placeholder') = '';
+// });
+
 // main search
-$(document).on("focus", ".search__input", function() {
+$(document).on("focus", ".search__input", function () {
   $(".search").addClass("search--focus");
   setTimeout(() => {
     $(".search__ac").slideDown(300);
   }, 100);
 });
 
-$(document).on("focusout", ".search__input", function() {
+$(document).on("focusout", ".search__input", function () {
   setTimeout(() => {
     $(".search__ac").slideUp(300);
   }, 100);
@@ -22,7 +26,7 @@ $(document).on("focusout", ".search__input", function() {
 });
 
 // cguide open
-$(document).on("click", ".js--cguide-open", function(e) {
+$(document).on("click", ".js--cguide-open", function (e) {
   e.preventDefault();
   if ($(this).hasClass("active")) {
     $(this).removeClass("active");
@@ -34,7 +38,7 @@ $(document).on("click", ".js--cguide-open", function(e) {
 });
 
 // main tabs
-$(document).on("click", "a[data-main-tab-nav]", function(e) {
+$(document).on("click", "a[data-main-tab-nav]", function (e) {
   e.preventDefault();
   let nTab = $(this).data("main-tab-nav");
   let href = $(this).parent("li");

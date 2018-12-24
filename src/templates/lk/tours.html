@@ -1,0 +1,46 @@
+---
+title: Профиль / Личный кабинет - EG
+navigation: true
+nav: true
+guide: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<section class="top">
+        <div class="container">
+            {% include "partials/_navigation.html" %}
+        </div>
+    </section>
+
+	<section class="lk">
+        <div class="container">
+            <div class="lk__wrap">
+                <div class="lk__left mb-2">
+                    <div class="user-pic">
+                        <div class="user-pic__photo">
+                            <img src="img/lk/userpic.png" alt="">
+                        </div>
+                        <div class="user-pic__name">
+                            Евгения Кулишенко
+                        </div>
+                    </div>
+                </div>
+                <div class="lk__right">
+
+                    <div class="lk__wrap lk__wrap--wrap">
+                        {# Экскурсии #}
+                        {% for i in [1,2,3,4,5] %}
+                            {% include "partials/blocks/_tour.html" %}
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

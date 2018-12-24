@@ -12,7 +12,15 @@
                 неслучайно. Город оказался совершенно своим, родным и светлым. Застольные песни, культура винограда, 
                 застывшие во времени целые кварталы – все это пришлось мне по душе и очень кстати. Сейчас...
             </div>
-            <a href="" class="comment__more">Подробнее</a>
+            {% if admin == true %}
+                <div class="admin__btns admin__btns--comment">
+                    <a href="" class="admin__btn admin__btn--public">Опубликовать</a>
+                    <a href="" class="admin__btn admin__btn--edit">Редактировать</a>
+                    <a href="" class="admin__btn admin__btn--delete">Удалить</a>
+                </div>
+            {% else %}
+                <a href="" class="comment__more">Подробнее</a>
+            {% endif %}
         </div>
     </div>
 </div>

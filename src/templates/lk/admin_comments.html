@@ -1,0 +1,48 @@
+---
+title: Профиль / Личный кабинет - EG
+navigation: true
+nav: true
+admin: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<section class="top">
+        <div class="container">
+            {% include "partials/_navigation.html" %}
+        </div>
+    </section>
+
+	<section class="lk">
+        <div class="container">
+            <div class="lk__wrap">
+                <div class="lk__left mb-2">
+                    <div class="lk__left-nav">
+                        <ul>
+                            <li><a href="#">Гиды</a></li>
+                            <li class="active"><a href="#">Комментарии</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="lk__right">
+
+                    {# First card #}
+                    <div class="lk__card mb-3">
+                        <div class="lk__title">Управление комментариями</div>
+                        <div class="lk__comments">
+                            {% for i in [1,2,3,4,5] %}
+                                {% include "partials/blocks/_comment.html" %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {# End first card #}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

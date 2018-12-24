@@ -1,0 +1,142 @@
+---
+title: Добавить экскурсию / Личный кабинет - EG
+navigation: true
+nav: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	<section class="top">
+        <div class="container">
+            {% include "partials/_navigation.html" %}
+        </div>
+    </section>
+
+	<section class="lk">
+        <div class="container">
+            <div class="lk__wrap">
+                <div class="lk__left mb-2">
+                    <div class="tour-pic">
+                        <div class="tour-pic__photo">
+                            <img src="img/lk/tourpic.png" alt="">
+                        </div>
+                        <a href="" class="tour-pic__add-photo">Добавить фото обложки</a>
+                    </div>
+                </div>
+                <div class="lk__right">
+
+                    {# First card #}
+                    <div class="lk__card mb-3">
+                        <div class="lk__title">Основная информация</div>
+                        <div class="lk__form form">
+                            <div class="form__group">
+                                <input type="text" class="form__input lk__country" placeholder="Введите название экскурсии" />
+                            </div>
+                            <div class="lk__form-wrap mb-1">
+                                <div class="lk__form-col lk__form-col--top">
+                                    <div class="form__group">
+                                        <input type="text" name="" id="" class="form__input" placeholder="Геолокация экскурсии" />
+                                        <a href="" class="lk__add">+ Добавить геолокацию</a>
+                                    </div>
+                                    <div class="form__group lk__form-select">
+                                        <select name="" id="" class="form__select">
+                                            <option value="Страна">Категория экскурсии</option>
+                                            <option value="Страна">Страна</option>
+                                        </select>
+                                        <div class="lk__form-select-arr">&#9660;</div>
+                                    </div>
+                                    <div class="form__group">
+                                        <input type="text" name="" id="" class="form__input" placeholder="Маршрут экскурсии" />
+                                        <div class="form__helper">Введите краткое описание маршрута, напр. Колизей — Ватикан — Вилла Д’Эсте</div>
+                                    </div>
+                                </div>
+                                <div class="lk__form-col lk__form-col--top">
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Язык на котором проводится экскурсия" />
+                                        <a href="" class="lk__add">+ Добавить язык</a>
+                                    </div>
+                                    <div class="form__group lk__form-select">
+                                        <select name="" id="" class="form__select">
+                                            <option value="Страна">Экскурсия доступна для...</option>
+                                            <option value="Страна">Страна</option>
+                                        </select>
+                                        <div class="lk__form-select-arr">&#9660;</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="lk__form-wrap">
+                                <div class="lk__form-col lk__form-col--top">
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Услуги" />
+                                        <div class="form__helper">Введите через запятую услуги, которые входят в экскурсию</div>
+                                    </div>
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Дополнительные расходы" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lk__form-wrap">
+                                <div class="lk__form-col lk__form-col--top">
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Место встречи" />
+                                    </div>
+                                </div>
+                                <div class="lk__form-col lk__form-col--top">
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Что с собой взять" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="lk__form-wrap">
+                                <div class="lk__form-col lk__form-col--top">
+                                    <div class="form__group">
+                                        <input type="text" class="form__input" placeholder="Орг. моменты" />
+                                        <div class="form__helper">Напр. Экскурсия начинается в 21:00, доступна с пятницы по воскресенье</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    {# End first card #}
+
+                    {# Three card #}
+                    <div class="lk__card mb-3">
+                        <div class="lk__title lk__title--nomrg">Расскажите туристам об экскурсии</div>
+                        <div class="lk__subtitle">не использовать тексты с других сайтов. Проверить уникальность текста text.ru</div>
+                        <div class="lk__form form">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <div class="form__helper">*Минимум 200 знаков</div>
+                        </div>
+                    </div>
+                    {# End three card #}
+
+                    {# Fore card #}
+                    <div class="lk__card mb-3">
+                        <div class="lk__title lk__title--nomrg">Лицензия гида</div>
+                        <div class="lk__subtitle">Если у Вас есть лицензия, обязательно покажите ее, это повысит уровень доверия к Вам</div>
+                        <div class="lk__upload upload">
+                            {# TODO: #}
+                            <h3>Загрузчик фото (будет подбираться и стилизоваться 
+                                в зависимости от дальнейшей реализации</h3>
+                        </div>
+                    </div>
+                    {# End fore card #}
+
+                    <div class="flex-center">
+                        <input type="submit" value="Сохранить" class="btn-submit" />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+	{% include "partials/_footer.html" %}
+
+{% endblock %}

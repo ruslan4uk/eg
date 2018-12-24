@@ -2,6 +2,12 @@
 	<div class="tour__image">
 		<img src="img/main/tours.png" alt="" />
 	</div>
+	{% if guide != true %}
+	<div class="tour__avatar">
+		<img src="img/main/photo.jpg" alt="">
+		<p>Евгения Кулишенко</p>
+	</div>
+	{% endif %}
 	<a href="" class="tour__title">Музей Ватикана</a>
 	<div class="tour__timeline timeline">
 		<div class="timeline__wrap">
